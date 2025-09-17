@@ -10,7 +10,7 @@ COPY website/ ./
 RUN npm run build
 
 # Stage 2: Production runtime (SIN NGINX)
-FROM mcr.microsoft.com/playwright:v1.50.0-noble
+FROM mcr.microsoft.com/playwright:v1.55.0-noble
 
 # Instalar solo dependencias necesarias
 RUN apt-get update && apt-get install -y \
