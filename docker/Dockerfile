@@ -45,7 +45,7 @@ RUN if [ -f "package-lock.json" ]; then \
 COPY src/ ./src/
 
 # Copy PM2 ecosystem configuration (now in root)
-COPY ecosystem.config.js ./
+
 
 # Copy built website from previous stage
 COPY --from=website-builder /app/website/out/ ./website/out/
