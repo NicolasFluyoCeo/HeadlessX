@@ -1,0 +1,6 @@
+services:
+  headlessx:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    command: node src/server.js
