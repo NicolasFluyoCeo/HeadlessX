@@ -4,3 +4,5 @@ services:
       context: .
       dockerfile: ./docker/Dockerfile
     command: node src/server.js
+    labels:
+      - "coolify.fqdn=https://headlessx.freelance.codes"
