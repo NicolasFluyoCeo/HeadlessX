@@ -5,4 +5,9 @@ services:
       dockerfile: ./docker/Dockerfile
     command: node src/server.js
     labels:
-      - "coolify.fqdn=https://headlessx.freelance.codes"
+      - "traefik.enable=true"
+      - "traefik.http.routers.headlessx-router.rule=Host(`headlessx.freelance.codes`)"
+      - "traefik.http.routers.headlessx-router.entrypoints=https"
+      - "traefik.http.routers.headlessx-router.tls=true"
+      - "traefik.http.routers.headlessx-router.service=headlessx-service"
+      - "traefik.http.services.headlessx-service.loadbalancer.server.port=3000"
