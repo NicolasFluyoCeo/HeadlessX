@@ -10,7 +10,7 @@ COPY website/ ./
 RUN npm run build
 
 # Stage 2: Production runtime (SIN NGINX)
-FROM mcr.microsoft.com/playwright:v1.40.0-focal
+FROM mcr.microsoft.com/playwright:v1.55.0-focal
 
 # Instalar solo dependencias necesarias
 RUN apt-get update && apt-get install -y \
